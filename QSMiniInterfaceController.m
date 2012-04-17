@@ -90,26 +90,25 @@ NSRect alignRectInRect(NSRect innerRect,NSRect outerRect,int quadrant);
 }
 
 - (void)expandWindow:(id)sender{ 
-  
-    NSRect expandedRect=[[self window]frame];
-    
-   // float diff=28;
-    expandedRect.size.height+=DIFF;
-    expandedRect.origin.y-=DIFF;
-     if (!expanded)
-    [[self window]setFrame:expandedRect display:YES animate:YES];
+    if (![self expanded]) {
+        NSRect expandedRect=[[self window]frame];
+        // float diff=28;
+        expandedRect.size.height+=DIFF;
+        expandedRect.origin.y-=DIFF;
+        [[self window]setFrame:expandedRect display:YES animate:YES];
+    }
     [super expandWindow:sender];
 }
 
 - (void)contractWindow:(id)sender{
-    NSRect contractedRect=[[self window]frame];
-    
-    contractedRect.size.height-=DIFF;
-    contractedRect.origin.y+=DIFF;
-    
-    if (expanded)
+    if ([self expanded]) {
+        NSRect contractedRect=[[self window]frame];
+        
+        contractedRect.size.height-=DIFF;
+        contractedRect.origin.y+=DIFF;
+        
         [[self window]setFrame:contractedRect display:YES animate:YES];
-    
+    }
     [super contractWindow:sender];
 }
 
