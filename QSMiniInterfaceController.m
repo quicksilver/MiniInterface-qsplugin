@@ -27,24 +27,27 @@ NSRect alignRectInRect(NSRect innerRect,NSRect outerRect,int quadrant);
 
 - (void) windowDidLoad{
         [super windowDidLoad];
-    [[self window] setLevel:NSModalPanelWindowLevel];
-    [[self window] setFrameAutosaveName:@"MiniInterfaceWindow"];
+    QSWindow *window = (QSWindow *)[self window];
+    [window setLevel:NSModalPanelWindowLevel];
+    [window setFrameAutosaveName:@"MiniInterfaceWindow"];
     
-    [[self window]setFrame:constrainRectToRect([[self window]frame],[[[self window]screen]visibleFrame]) display:NO];
-    [(QSWindow *)[self window]setHideOffset:NSMakePoint(150,0)];
-    [(QSWindow *)[self window]setShowOffset:NSMakePoint(-150,0)];
+    [[self window] setCollectionBehavior:NSWindowCollectionBehaviorTransient];
+    
+    [window setFrame:constrainRectToRect([[self window]frame],[[[self window]screen]visibleFrame]) display:NO];
+    [window setHideOffset:NSMakePoint(150,0)];
+    [window setShowOffset:NSMakePoint(-150,0)];
     
 	
-	[[self window] setShowEffect:[NSDictionary dictionaryWithObjectsAndKeys:@"QSVExpandEffect",@"transformFn",@"show",@"type",[NSNumber numberWithFloat:0.15],@"duration",nil]];
+	[window setShowEffect:[NSDictionary dictionaryWithObjectsAndKeys:@"QSVExpandEffect",@"transformFn",@"show",@"type",[NSNumber numberWithFloat:0.15],@"duration",nil]];
 	//	[window setHideEffect:[NSDictionary dictionaryWithObjectsAndKeys:@"QSShrinkEffect",@"transformFn",@"hide",@"type",[NSNumber numberWithFloat:.25],@"duration",nil]];
 	
-	[[self window] setWindowProperty:[NSDictionary dictionaryWithObjectsAndKeys:@"QSExplodeEffect",@"transformFn",@"hide",@"type",[NSNumber numberWithFloat:0.2],@"duration",nil]
+	[window setWindowProperty:[NSDictionary dictionaryWithObjectsAndKeys:@"QSExplodeEffect",@"transformFn",@"hide",@"type",[NSNumber numberWithFloat:0.2],@"duration",nil]
 							  forKey:kQSWindowExecEffect];
 	
-	[[self window] setWindowProperty:[NSDictionary dictionaryWithObjectsAndKeys:@"hide",@"type",[NSNumber numberWithFloat:0.15],@"duration",nil]
+	[window setWindowProperty:[NSDictionary dictionaryWithObjectsAndKeys:@"hide",@"type",[NSNumber numberWithFloat:0.15],@"duration",nil]
 							  forKey:kQSWindowFadeEffect];
 	
-	[[self window] setWindowProperty:[NSDictionary dictionaryWithObjectsAndKeys:@"QSVContractEffect",@"transformFn",@"hide",@"type",[NSNumber numberWithFloat:0.333],@"duration",nil,[NSNumber numberWithFloat:0.25],@"brightnessB",@"QSStandardBrightBlending",@"brightnessFn",nil]
+	[window setWindowProperty:[NSDictionary dictionaryWithObjectsAndKeys:@"QSVContractEffect",@"transformFn",@"hide",@"type",[NSNumber numberWithFloat:0.333],@"duration",nil,[NSNumber numberWithFloat:0.25],@"brightnessB",@"QSStandardBrightBlending",@"brightnessFn",nil]
 							  forKey:kQSWindowCancelEffect];
 	
 	
