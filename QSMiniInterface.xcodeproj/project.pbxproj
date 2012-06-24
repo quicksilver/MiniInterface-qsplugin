@@ -240,7 +240,6 @@
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Mini Interface";
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
