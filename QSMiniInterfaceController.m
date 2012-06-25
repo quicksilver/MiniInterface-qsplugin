@@ -44,10 +44,10 @@
 	
 	
 	
-	[dSelector setCollectionSpace:0.0f];
-	[iSelector setCollectionSpace:0.0f];
-	[dSelector setCollectionEdge:NSMinXEdge];
-	[iSelector setCollectionEdge:NSMinXEdge];
+	[(QSCollectingSearchObjectView *)dSelector setCollectionSpace:0.0f];
+	[(QSCollectingSearchObjectView *)iSelector setCollectionSpace:0.0f];
+	[(QSCollectingSearchObjectView *)dSelector setCollectionEdge:NSMinXEdge];
+	[(QSCollectingSearchObjectView *)iSelector setCollectionEdge:NSMinXEdge];
 	
 	
 	
