@@ -23,7 +23,6 @@
 		14DE8D5E10D0BA8A00851A6F /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		14DE8D5F10D0BA8A00851A6F /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
 		14DE8D6010D0BA8A00851A6F /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
-		14DE8D6110D0BA8A00851A6F /* QSPlugIn_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPlugIn_Prefix.pch; sourceTree = "<group>"; };
 		14DE8D6210D0BA8A00851A6F /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
 		14DE8D6310D0BA8A00851A6F /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
 		14DE8D6410D0BA8A00851A6F /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -87,13 +86,13 @@
 				14DE8D5E10D0BA8A00851A6F /* Debug.xcconfig */,
 				14DE8D5F10D0BA8A00851A6F /* Developer.xcconfig */,
 				14DE8D6010D0BA8A00851A6F /* QSPlugIn_Debug.xcconfig */,
-				14DE8D6110D0BA8A00851A6F /* QSPlugIn_Prefix.pch */,
 				14DE8D6210D0BA8A00851A6F /* QSPlugIn_Release.xcconfig */,
 				14DE8D6310D0BA8A00851A6F /* QSPlugIn.xcconfig */,
 				14DE8D6410D0BA8A00851A6F /* Release.xcconfig */,
 			);
-			path = Configuration;
-			sourceTree = QS_SOURCE_ROOT;
+			name = Configuration;
+			path = /private/tmp/QS/Configuration;
+			sourceTree = "<absolute>";
 		};
 		1ED78706FE9D4A0611CA0C5A /* Products */ = {
 			isa = PBXGroup;
@@ -236,17 +235,16 @@
 /* Begin XCBuildConfiguration section */
 		7FFF247F085E488500266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14DE8D6010D0BA8A00851A6F /* QSPlugIn_Debug.xcconfig */;
+			baseConfigurationReference = 14DE8D6310D0BA8A00851A6F /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Mini Interface";
-				ZERO_LINK = YES;
 			};
 			name = Debug;
 		};
 		7FFF2480085E488500266176 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14DE8D6210D0BA8A00851A6F /* QSPlugIn_Release.xcconfig */;
+			baseConfigurationReference = 14DE8D6310D0BA8A00851A6F /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Mini Interface";
