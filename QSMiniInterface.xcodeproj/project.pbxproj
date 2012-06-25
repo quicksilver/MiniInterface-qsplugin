@@ -235,7 +235,7 @@
 /* Begin XCBuildConfiguration section */
 		7FFF247F085E488500266176 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14DE8D6010D0BA8A00851A6F /* QSPlugIn_Debug.xcconfig */;
+			baseConfigurationReference = 14DE8D6310D0BA8A00851A6F /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Mini Interface";
@@ -244,7 +244,7 @@
 		};
 		7FFF2480085E488500266176 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14DE8D6210D0BA8A00851A6F /* QSPlugIn_Release.xcconfig */;
+			baseConfigurationReference = 14DE8D6310D0BA8A00851A6F /* QSPlugIn.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = "Mini Interface";
